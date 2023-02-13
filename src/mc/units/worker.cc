@@ -288,6 +288,8 @@ const
   if (conf.show_nb_states)
   {
     std::cout << m.size().template convert_to<long double>() << " states\n";
+    // MCC format
+    std::cout << "STATE_SPACE STATES " << m.size() << " TECHNIQUES SEQUENTIAL_PROCESSING DECISION_DIAGRAMS USE_NUPN\n";
   }
 
   if (conf.compute_dead_transitions and net.transitions().size())
